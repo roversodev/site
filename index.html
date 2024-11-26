@@ -7,6 +7,8 @@
 
     <title>Roverso Dev</title>
 
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+
     <!-- Favicon -->
     <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
 
@@ -225,7 +227,7 @@
                                         <p class="text-white opacity-8">De protótipos rápidos a código de produção,
                                             oferecemos soluções completas para acelerar seus projetos com a máxima
                                             qualidade.</p>
-                                        <a href=".//sections/page-sections/hero-sections.html" target="_blank"
+                                        <a href="#" id="serv-btn"
                                             class="btn btn-white btn-sm w-50 mx-auto mt-3">Explore as Soluções</a>
                                     </div>
                                 </div>
@@ -480,7 +482,7 @@
                     <div class="col-md-4 teste3">
                         <div class="card card-plain text-center">
                             <a href="javascript:;">
-                                <img class="avatar avatar-xl shadow-xl" src="../../assets/img/team-4.jpg"
+                                <img class="avatar avatar-xl shadow-xl" src="./assets/img/team-4.jpg"
                                     alt="Testemunho Cliente 3">
                             </a>
                             <div class="card-body">
@@ -863,6 +865,17 @@
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
 
+        document.getElementById('serv-btn').addEventListener('click', function (event) {
+            // Impede o comportamento padrão do link (evitar recarregar a página)
+            event.preventDefault();
+
+            // Localiza a seção com o ID "minha-secao"
+            const targetSection = document.getElementById('servicos');
+
+            // Faz a rolagem suave até a seção
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
         document.getElementById('port-btn').addEventListener('click', function (event) {
             // Impede o comportamento padrão do link (evitar recarregar a página)
             event.preventDefault();
@@ -906,6 +919,7 @@
         });
     </script>
     <script src="https://unpkg.com/typed.js@2.0.14"></script>
+    <!--
     <script>
         if (document.getElementById("typed")) {
             var typed = new Typed("#typed", {
@@ -918,6 +932,7 @@
             });
         }
     </script>
+    -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/scroll.js"></script>
